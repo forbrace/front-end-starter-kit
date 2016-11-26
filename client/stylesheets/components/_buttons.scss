@@ -1,0 +1,58 @@
+// remove bootstrap buttons focus
+.btn {
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include no-tab-focus;
+    }
+  }
+}
+
+//button sizes (width)
+.btn-width-xxs {
+  min-width: ($grid-gutter-width * 3);
+}
+.btn-width-xs {
+  min-width: ($grid-gutter-width * 4);
+}
+.btn-width-sm {
+  min-width: ($grid-gutter-width * 5);
+}
+.btn-width-md {
+  min-width: ($grid-gutter-width * 6);
+}
+.btn-width-lg {
+  min-width: ($grid-gutter-width * 7);
+}
+
+//** Responsive Buttons
+//
+@media(max-width: $screen-xs) {
+  .btn-xxs-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media(max-width: $screen-xs-max) {
+  .btn-xs-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media(max-width: $screen-sm-max) {
+  .btn-sm-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media(max-width: $screen-md-max) {
+  .btn-md-block {
+    display: block;
+    width: 100%;
+  }
+}

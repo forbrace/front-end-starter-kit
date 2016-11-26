@@ -1,0 +1,16 @@
+//
+// Cursor utilities
+//
+
+// Helpers
+.clickable {
+  cursor: pointer;
+}
+
+.not-clickable {
+  cursor: default;
+}
+
+.helpable {
+  cursor: help;
+}

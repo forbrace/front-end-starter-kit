@@ -1,0 +1,39 @@
+.hr-dashed {
+  border-top: 1px dashed $hr-border;
+}
+
+.hr-height-2 {
+  border-top-width: 2px;
+}
+
+.hr-muted {
+  border-color: $text-muted;
+}
+
+.hr-gray-lightest {
+  border-color: $gray-lightest;
+}
+
+.hr-gray-lighter {
+  border-color: $gray-lighter;
+}
+
+.hr-gray-light {
+  border-color: $gray-light;
+}
+
+.hr-gray {
+  border-color: $gray;
+}
+
+.hr-gray-dark {
+  border-color: $gray-dark;
+}
+
+.hr-gray-darker {
+  border-color: $gray-darker;
+}
+
+.hr-gray-base {
+  border-color: $gray-base;
+}

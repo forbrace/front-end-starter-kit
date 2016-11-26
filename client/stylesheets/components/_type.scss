@@ -1,0 +1,187 @@
+// Sizes
+.text-h1 {
+  font-size: $font-size-h1;
+}
+
+.text-h2 {
+  font-size: $font-size-h2;
+}
+
+.text-h3 {
+  font-size: $font-size-h3;
+}
+
+.text-h4 {
+  font-size: $font-size-h4;
+}
+
+.text-h5 {
+  font-size: $font-size-h5;
+}
+
+.text-h6 {
+  font-size: $font-size-h6;
+}
+
+// Decorations
+.text-nodecor {
+  text-decoration: none;
+}
+
+.text-decor {
+  text-decoration: underline;
+}
+
+a.text-decor:hover {
+  text-decoration: none;
+}
+
+
+//** Text Font Weights
+//
+.text-200 {
+  font-weight: 200;
+}
+
+.text-300 {
+  font-weight: 300;
+}
+
+.text-400 {
+  font-weight: 400;
+}
+
+.text-500 {
+  font-weight: 500;
+}
+
+.text-600 {
+  font-weight: 600;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+//** Line heights
+//
+.line-height-normal {
+  line-height: normal; // Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly 1.2, depending on the element's font-family.
+}
+
+.line-height-base {
+  line-height: $line-height-base;
+}
+
+.line-height-computed {
+  line-height: $line-height-computed;
+}
+
+.line-height-lg {
+  line-height: 2;
+}
+
+.line-height-md {
+  line-height: 1.5;
+}
+
+.line-height-sm {
+  line-height: 1.33;
+}
+
+.line-height-xs {
+  line-height: 1.1;
+}
+
+.line-height-xxs {
+  line-height: 1;
+}
+
+//** Responsive Text alignments
+//
+@media(max-width: $screen-xs) {
+  .text-xxs-left {
+    text-align: left;
+  }
+  .text-xxs-right {
+    text-align: right;
+  }
+  .text-xxs-center {
+    text-align: center;
+  }
+}
+
+@media(max-width: $screen-xs-max) {
+  .text-xs-left {
+    text-align: left;
+  }
+  .text-xs-right {
+    text-align: right;
+  }
+  .text-xs-center {
+    text-align: center;
+  }
+}
+
+@media(max-width: $screen-sm-max) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+}
+
+@media(max-width: $screen-md-max) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+}
+
+// Text Wraps
+.text-wrap {
+  white-space: normal;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  // Non standard for webkit
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.text-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-pre-line {
+  white-space: pre-line;
+}
+
+// Gray text colors variants
+@include text-emphasis-variant('.text-white', $white);
+@include text-emphasis-variant('.text-gray-lighter', $gray-lighter);
+@include text-emphasis-variant('.text-gray-light', $gray-light);
+@include text-emphasis-variant('.text-gray', $gray);
+@include text-emphasis-variant('.text-gray-dark', $gray-dark);
+@include text-emphasis-variant('.text-gray-darker', $gray-darker);
+@include text-emphasis-variant('.text-black', $black);
+
+// Brand text colors variants
+@include text-emphasis-variant('.text-brand-primary', $brand-primary);
+@include text-emphasis-variant('.text-brand-success', $brand-success);
+@include text-emphasis-variant('.text-brand-info', $brand-info);
+@include text-emphasis-variant('.text-brand-warning', $brand-warning);
+@include text-emphasis-variant('.text-brand-danger', $brand-danger);

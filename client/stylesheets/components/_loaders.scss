@@ -1,0 +1,220 @@
+//TODO: move to vars
+$loader-green: $brand-success;
+$loader-blue: $brand-primary;
+$loader-red: $brand-danger;
+$loader-yellow: $brand-warning;
+// scaling
+$loader-width: 50px;
+
+.loader-overlay-wrapper {
+  position: relative;
+}
+.loader-overlay-wrapper-holder {
+  min-height: $loader-width;
+}
+.loader-overlay-wrapper-holder-xs {
+  min-height: $loader-width * 0.25;
+}
+.loader-overlay-wrapper-holder-sm {
+  min-height: $loader-width * 0.5;
+}
+.loader-overlay-wrapper-holder-md {
+  min-height: $loader-width * 1.25;
+}
+.loader-overlay-wrapper-holder-lg {
+  min-height: $loader-width * 2;
+}
+
+.loader-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.7);
+}
+
+.loader-overlay-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include translate(-50%, -50%);
+}
+
+span.loader {
+  display: inline-block;
+}
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: $loader-width;
+  &:before {
+    content:'';
+    display: block;
+    padding-top: 100%;
+  }
+
+  .circular {
+    @include animation(loader-rotate 2s linear infinite);
+    height: 100%;
+    @include transform-origin(center center);
+    width: 100%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+  }
+
+  .path {
+    //stroke-dasharray: 1,200;
+    stroke-dasharray: 200%,500; // IE spinner
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke: $gray-dark;
+    @include animation(loader-dash 1.5s ease-in-out infinite);
+  }
+
+  &.loader-colored .path {
+    $animation: loader-dash 1.5s ease-in-out infinite, loader-color 6s ease-in-out infinite;
+    -webkit-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+  }
+
+  &.loader-dark .path {
+    stroke: $gray-dark;
+  }
+  &.loader-white .path {
+    stroke: $white;
+  }
+}
+
+// loader sizes
+.loader-xs {
+  width: $loader-width * 0.25;
+}
+.loader-sm {
+  width: $loader-width * 0.5;
+}
+.loader-md {
+  width: $loader-width * 1.25;
+}
+.loader-lg {
+  width: $loader-width * 2;
+}
+
+// loaders btn heights
+.loader-btn-xs {
+  $size: $padding-xs-vertical * 2 + $font-size-small * $line-height-small + 2;
+  width: $size;
+  height: $size;
+}
+.loader-btn-sm {
+  $size: $padding-small-vertical * 2 + $font-size-small * $line-height-small + 2;
+  width: $size;
+  height: $size;
+}
+.loader-btn-md {
+  $size: $padding-base-vertical * 2 + $font-size-base * $line-height-base + 2;
+  width: $size;
+  height: $size;
+}
+.loader-btn-lg {
+  $size: $padding-large-vertical * 2 + $font-size-large * $line-height-large + 2 - 1;
+  width: $size;
+  height: $size;
+}
+
+
+@-webkit-keyframes loader-rotate{
+  100%{
+    @include rotate(360deg);
+  }
+}
+@keyframes loader-rotate{
+  100%{
+    @include rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-dash{
+  0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px;
+  }
+  100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes loader-dash{
+  0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px;
+  }
+  100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px;
+  }
+}
+@-webkit-keyframes loader-color{
+  100%, 0%{
+    stroke: $loader-red;
+  }
+  40%{
+    stroke: $loader-blue;
+  }
+  66%{
+    stroke: $loader-green;
+  }
+  80%, 90%{
+    stroke: $loader-yellow;
+  }
+}
+@keyframes loader-color{
+  100%, 0%{
+    stroke: $loader-red;
+  }
+  40%{
+    stroke: $loader-blue;
+  }
+  66%{
+    stroke: $loader-green;
+  }
+  80%, 90%{
+    stroke: $loader-yellow;
+  }
+}
+
+.loader-centering {
+  position: relative;
+  min-height: $loader-width * 2;
+
+  .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 12;
+    @include translate(-50%, -50%);
+  }
+}
+.loader-centering-content {
+  position: relative;
+  z-index: 13;
+}
+.loader-centering-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.8);
+  z-index: 11;
+}

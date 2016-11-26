@@ -1,0 +1,23 @@
+{
+  "name": "front-end-starter-kit",
+  "description": "Bootstrap based HTML, CSS Framework for developing responsive, mobile first large scale projects on the web fast and easily",
+  "main": "app.js",
+  "authors": [
+    "Dmitry Paputsa <dmitry@paputsa.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "sass-flex-mixin": "^1.0.3",
+    "jquery": "^3.1.1"
+  }
+}

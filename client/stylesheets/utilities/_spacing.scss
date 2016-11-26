@@ -1,0 +1,27 @@
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $lengths in $spacers {
+    $length-x:   map-get($lengths, x);
+    $length-y:   map-get($lengths, y);
+
+    .#{$abbrev}-#{$size} { #{$prop}:        $length-y $length-x; } // a = All sides
+    .#{$abbrev}t-#{$size} { #{$prop}-top:    $length-y; }
+    .#{$abbrev}r-#{$size} { #{$prop}-right:  $length-x; }
+    .#{$abbrev}b-#{$size} { #{$prop}-bottom: $length-y; }
+    .#{$abbrev}l-#{$size} { #{$prop}-left:   $length-x; }
+
+    // Axes
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right:  $length-x;
+      #{$prop}-left:   $length-x;
+    }
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top:    $length-y;
+      #{$prop}-bottom: $length-y;
+    }
+  }
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left:  auto;
+}

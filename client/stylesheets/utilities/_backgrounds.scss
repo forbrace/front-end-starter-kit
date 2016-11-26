@@ -1,0 +1,29 @@
+//
+// Contextual backgrounds
+//
+
+.bg-faded {
+  background-color: $gray-lightest;
+}
+
+@include bg-variant('.bg-primary', $brand-primary);
+
+@include bg-variant('.bg-success', $state-success-bg);
+
+@include bg-variant('.bg-info', $state-info-bg);
+
+@include bg-variant('.bg-warning', $state-warning-bg);
+
+@include bg-variant('.bg-danger', $state-danger-bg);
+
+@include bg-variant('.bg-brand-success', $brand-success);
+
+@include bg-variant('.bg-brand-info', $brand-info);
+
+@include bg-variant('.bg-brand-warning', $brand-warning);
+
+@include bg-variant('.bg-brand-danger', $brand-danger);
+
+@include bg-variant('.bg-inverse', $brand-inverse);
+
+@include bg-variant('.bg-white', $white);

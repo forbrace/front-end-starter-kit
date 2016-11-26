@@ -1,0 +1,72 @@
+.row-condensed {
+  // Row
+  //
+  // Rows contain and clear the floats of your columns.
+  &,
+  & .row {
+    @include make-row-condensed();
+  }
+
+  // Columns
+  //
+  // Common styles for small and large grid columns
+
+  @include make-grid-columns-condensed();
+}
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    //width: $container-sm;
+    width: auto;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+// Generate appropriate bootstrap width classes, i.e. .col-sm-width-1,.col-sm-width-2... etc.
+@include make-grid-width(xxs-width);
+// 5 cols width
+.col-xxs-width-24 {
+  width: 20%;
+}
+
+@media (min-width: $screen-xs-min) {
+  @include make-grid-width(xs-width);
+  // 5 cols width
+  .col-xs-width-24 {
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid-width(sm-width);
+
+  // 5 cols width
+  .col-sm-width-24 {
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  @include make-grid-width(md-width);
+
+  // 5 cols width
+  .col-md-width-24 {
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid-width(lg-width);
+
+  // 5 cols width
+  .col-lg-width-24 {
+    width: 20%;
+  }
+}

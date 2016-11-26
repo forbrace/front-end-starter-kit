@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+.dist
+.sass-cache
+node_modules
+bower_components
+public
+dist
+email
+npm-debug.log
+client/images/svgo
+client/tests.html

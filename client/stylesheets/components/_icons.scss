@@ -1,0 +1,128 @@
+//.icon-wrap {
+//  display: inline-block;
+//  width: 1em;
+//  @extend .valign-center;
+//  &:after {
+//    content: '.';
+//    color: rgba(0,0,0,0);
+//    margin-left: -1em;
+//  }
+//}
+.icon {
+  fill: currentColor;
+  //width:  1em;
+  //height: 1em;
+  display: inline-block;
+  vertical-align: -.325ex;
+  //vertical-align: calc((1em - 1ex)/4 - (1em - 1ex)/2);
+  //vertical-align: middle;
+
+
+  width:  2ex;
+  height: 2ex;
+  //vertical-align: middle;
+}
+
+.icon-lg {
+  width: 1.33333333em;
+  height: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+  //vertical-align: -.75ex;
+  //vertical-align: calc((1em - 1ex)/4 - (1.33333333em - 1ex)/2);
+}
+
+.icon-2x {
+  width: 2em;
+  height: 2em;
+}
+
+.icon-3x {
+  width: 3em;
+  height: 3em;
+}
+
+.icon-4x {
+  width: 4em;
+  height: 4em;
+}
+
+.icon-5x {
+  width: 5em;
+  height: 5em;
+}
+
+.icon-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+.icon-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+.icon-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.icon-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.icon-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.icon-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.icon-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.icon-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .icon-rotate-90,
+:root .icon-rotate-180,
+:root .icon-rotate-270,
+:root .icon-flip-horizontal,
+:root .icon-flip-vertical {
+  filter: none;
+}
+
+.icon-inverse {
+  color: $white;
+}

@@ -1,0 +1,88 @@
+// Display Table layout
+.table-layout-fixed {
+  table-layout: fixed;
+}
+
+.table-container,
+.table-container-fluid,
+.block-table,
+.block-table-fluid {
+  display: table;
+}
+
+.table-container-fluid,
+.block-table-fluid {
+  width: 100%;
+}
+
+.table-inline-container,
+.table-container-inline {
+  display: inline-table;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell,
+.table-cell-fluid {
+  display: table-cell;
+}
+
+.table-cell-fluid {
+  width: 100%;
+}
+
+.table-cell-grid-divider {
+  width: $grid-gutter-width;
+  display: table-cell;
+}
+
+.table-cell-grid-condensed-divider {
+  width: ($grid-gutter-width / 2);
+}
+
+html {
+  @media(max-width: $screen-xs) {
+    .table-cell-xxs-block {
+      display: block;
+    }
+  }
+  @media(max-width: $screen-xs-max) {
+    .table-cell-xs-block {
+      display: block;
+    }
+  }
+  @media(max-width: $screen-sm-max) {
+    .table-cell-sm-block {
+      display: block;
+    }
+  }
+  @media(max-width: $screen-md-max) {
+    .table-cell-md-block {
+      display: block;
+    }
+  }
+}
+
+// Helper classes
+.no-resize {
+  resize: none;
+}
+
+.accelerate {
+  @include translate3d(0, 0, 0);
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+}

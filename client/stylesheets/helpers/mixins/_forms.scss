@@ -1,0 +1,14 @@
+@mixin form-control-focus-custom($color: $input-border-focus) {
+  &:focus {
+    color: $input-color-focus;
+    background-color: $input-bg-focus;
+    //border-color: $input-border-focus;
+    outline: 1px solid transparentize($input-border-focus, .1);
+    outline-offset: -1px;
+    @include box-shadow($input-box-shadow);
+  }
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+}
