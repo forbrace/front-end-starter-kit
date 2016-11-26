@@ -2,6 +2,10 @@
   "name": "front-end-starter-kit",
   "version": "1.0.0",
   "description": "Bootstrap based HTML, CSS Framework for developing responsive, mobile first large scale projects on the web fast and easily",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forbrace/front-end-starter-kit/"
+  },
   "main": "app.js",
   "scripts": {
     "start": "./node_modules/gulp/bin/gulp.js",
@@ -9,7 +13,10 @@
     "postinstall": "bower install",
     "postupdate": "bower update"
   },
-  "author": "",
+  "author": {
+    "name": "Dmitry Paputsa",
+    "email": "dmitry@paputsa.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "4": "0.0.0",

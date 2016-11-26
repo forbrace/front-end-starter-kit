@@ -3,7 +3,7 @@ HTML, CSS Framework for developing responsive, mobile first large scale projects
 
 ## Install
 
-Clone or download
+Clone or download.
 
 `$ cd front-end-starter-kit`
 
@@ -17,4 +17,6 @@ Clone or download
  
  `dist/` contains minified html/css/js, `public/` – uncompressed files with mapped css.
 
-Serve url <a href="http://localhost:8080">http://localhost:8080</a>
+Serve url <a href="http://localhost:8080">http://localhost:8080</a>.
+
+Documentation is <a href="http://paputsa.com/front-end-starter-kit/">here</a>.
