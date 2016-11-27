@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="stylesheets/app.scss">
 
+    <style type="text/css">
+        html pre.prettyprint {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+
 </head>
 <body data-spy="scroll" data-target="#navbar">
 
@@ -106,7 +113,7 @@
 
                         <h2 id="source-code">Source code structure</h2>
 
-                <pre>front-end-starter-kit
+                <pre class="prettyprint lang-html">front-end-starter-kit
 ├── client/
 │   ├── fonts
 │   ├── images
@@ -133,7 +140,7 @@
                             to begin working with a minimal document.
                         </p>
 
-                <pre>&lt;!DOCTYPE html&gt;
+                <pre class="prettyprint lang-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -205,7 +212,7 @@
                         <h2 id="layout">Layout</h2>
                         <p>The Grid system is taken from bootstrap (<code>.col-sm-…</code> etc.) and extended with
                             flexbox columns to keep equal height.</p>
-                <pre>&lt;div class="row-flex-condensed"&gt;
+                <pre class="prettyprint lang-html">&lt;div class="row-flex-condensed"&gt;
     &lt;div class="col-flex flexbox align-items-stretch col-xs-width-3 col-xxs-width-12"&gt;
         &lt;div class="bg-info mb-2 col-xxs-width-12"&gt;
             &lt;div class="p-3"&gt;
@@ -251,7 +258,7 @@
 
                         <h2 id="flexbox">Flexbox examples</h2>
 
-                <pre>&lt;div class="fls=box mb-6"&gt;
+                <pre class="prettyprint lang-html">&lt;div class="fls=box mb-6"&gt;
     &lt;div class="mr-3"&gt;
         text
     &lt;/div&gt;
@@ -281,7 +288,7 @@
                             </div>
                         </div>
 
-                <pre>&lt;div class="row-flex-condensed"&gt;
+                <pre class="prettyprint lang-html">&lt;div class="row-flex-condensed"&gt;
     &lt;div class="col-flex flexbox align-items-stretch col-xs-width-6 col-xxs-width-12 mb-3"&gt;
         &lt;div class="col-xxs-width-12 bg-info p-3"&gt;
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cupiditate deserunt dicta
@@ -348,7 +355,7 @@
                         </div>
 
 
-                <pre>&lt;div class="flexbox align-items-stretch"&gt;
+                <pre class="prettyprint lang-html">&lt;div class="flexbox align-items-stretch"&gt;
     &lt;div class="bg-info flexbox-column"&gt;
         &lt;div class="flexbox flex-grow-1"&gt;
             &lt;div class="align-self-start p-3"&gt;
@@ -450,7 +457,7 @@
 
                         <h2 id="display-table">Display Table examples</h2>
 
-               <pre>&lt;div class="table-container-fluid mb-3"&gt;
+               <pre class="prettyprint lang-html">&lt;div class="table-container-fluid mb-3"&gt;
     &lt;div class="table-cell table-cell-xs-block text-middle col-sm-width-6 mb-3"&gt;
         Middle centered
     &lt;/div&gt;
@@ -479,7 +486,7 @@
                             an attempt to create custom select.
                         </p>
 
-                <pre>&lt;div class="form-group"&gt;
+                <pre class="prettyprint lang-html">&lt;div class="form-group"&gt;
     &lt;div class="form-control-select"&gt;
         &lt;select class="form-control"&gt;
             &lt;option&gt;1&lt;/option&gt;
@@ -600,7 +607,7 @@
                             but icons created this way are really good, easy to use and placed perfectly inside any
                             elements.
                         </p>
-                        <pre>&lt;span class="fi fi-bug fi-spin"&gt;&lt;/span&gt; Some spinning bug…</pre>
+                        <pre class="prettyprint lang-html">&lt;span class="fi fi-bug fi-spin"&gt;&lt;/span&gt; Some spinning bug…</pre>
                         <p>
                             <span class="fi fi-bug fi-spin"></span> Some spinning bug…
                         </p>
@@ -609,7 +616,7 @@
                             but they are not perfectly placed vertically and looks like a mess inside your code.
                         </p>
 
-                <pre>&lt;svg class="icon" aria-label="Cached" viewBox="0 0 24 24"&gt;
+                <pre class="prettyprint lang-html">&lt;svg class="icon" aria-label="Cached" viewBox="0 0 24 24"&gt;
     &lt;path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z"&gt;&lt;/path&gt;
     &lt;path d="M0 0h24v24H0z" fill="none"&gt;&lt;/path&gt;
 &lt;/svg&gt;
@@ -724,14 +731,14 @@ Cached</pre>
                         <p>
                             Images can be used as background pictures that cover or contain entire block element with specific ratio (16×9, 4×3, 3×2, 8×5, 1×1, etc.). Correspondent wrapper classes are used <code>.img-contain</code> and <code>.img-cover</code> with ratio class inside:
                         </p>
-                        <pre>&lt;div class="bg-cover" style="background-image: url(image_to_cover)"&gt;
+                        <pre class="prettyprint lang-html">&lt;div class="bg-cover" style="background-image: url(image_to_cover)"&gt;
     &lt;div class="img-ratio-16x9"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
                         <p>
                             Video frames have wrapper class <code>.img-video-wrapper</code> with iframe inside to make it 100% width and `auto` height.
                         </p>
-                        <pre>&lt;div class="img-video-wrapper"&gt;
+                        <pre class="prettyprint lang-html">&lt;div class="img-video-wrapper"&gt;
     &lt;iframe src="…" frameborder="0"&gt;&lt;/iframe&gt;
 &lt;/div&gt;</pre>
 
@@ -912,6 +919,8 @@ Cached</pre>
 
 <script src="assets/js/lib.js"></script>
 <script src="assets/js/app.js"></script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 <script>
 (function () {
